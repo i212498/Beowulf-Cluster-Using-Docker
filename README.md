@@ -11,6 +11,9 @@ This project simplifies the setup of a Beowulf Cluster using Docker containers. 
 - Persistent storage for the cluster is managed by a storage directory created on the desktop.
 - Docker image utilized:  [`mpiclone`](https://hub.docker.com/r/i212498/mpiclone), available on Docker Hub.
 
+## Note
+- Make sure to replace username with your current username in the `makeclusters.sh` file.
+
 ## Usage
 
 1. **Clone the Repository:**
