@@ -8,7 +8,7 @@ This project simplifies the setup of a Beowulf Cluster using Docker containers. 
 - Includes two bash scripts:
   - `makeclusters.sh`: Used to create the Beowulf cluster.
   - `deleteclusters.sh`: Used to delete the Beowulf cluster.
-- Persistent storage for the cluster is managed by a storage file created on the desktop.
+- Persistent storage for the cluster is managed by a storage directory created on the desktop.
 - Docker image utilized: `mpiclone`, available on Docker Hub.
 
 ## Usage
