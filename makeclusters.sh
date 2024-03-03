@@ -22,7 +22,11 @@ sudo docker exec node1 bash -c 'ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa -q\
     && cp /root/.ssh/id_rsa.pub /root/.ssh/node1 \
     && cp /root/.ssh/node1 /home/storage \
     && ip_address=$(hostname -I | cut -d" " -f1) \
-    && echo "$ip_address" >> /home/storage/machinefile'
+    && echo "$ip_address" >> /home/storage/machinefile \
+    && touch /root/.ssh/config \
+    && echo "Host *
+    StrictHostKeyChecking no" >> /root/.ssh/config \
+    && chmod 400 /root/.ssh/config'
 
 for (( i=2; i<=no_of_nodes; i++ ))
 do
@@ -34,7 +38,11 @@ do
     && ip_address=$(hostname -I | cut -d" " -f1) \
     && echo "$ip_address" >> /home/storage/machinefile \
     && cp /home/storage/node1 /root/.ssh \
-    && cat /root/.ssh/node1 >> /root/.ssh/authorized_keys'
+    && cat /root/.ssh/node1 >> /root/.ssh/authorized_keys \
+    && touch /root/.ssh/config \
+    && echo "Host *
+    StrictHostKeyChecking no" >> /root/.ssh/config \
+    && chmod 400 /root/.ssh/config'
 
 	sudo docker exec node1 bash -c 'cp /home/storage/node'"$i"' /root/.ssh \
     && cat /root/.ssh/node'"$i"' >> /root/.ssh/authorized_keys'
@@ -43,4 +51,3 @@ do
 done
 
 sudo docker exec -it node1 bash
-
