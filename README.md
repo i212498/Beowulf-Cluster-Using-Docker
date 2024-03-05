@@ -38,7 +38,7 @@ Before proceeding with the setup, ensure you have Docker Engine installed on you
    When inside node1 terminal proceed to:
    ```bash
    cd /home/storage
-  
+   ```
    Where the machinefile will be located.
 
 5. **deletecluster.sh**
