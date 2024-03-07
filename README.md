@@ -1,6 +1,6 @@
 # Beowulf Cluster Using Docker
 
-This project simplifies the setup of a Beowulf Cluster using Docker containers. Beowulf clusters are a type of high-performance computing (HPC) cluster architecture, typically used for parallel computing tasks.
+This project simplifies the setup of a Beowulf Cluster using Docker containers. Beowulf clusters are a type of high-performance computing (HPC) cluster architecture, typically used for parallel computing tasks. This is for MPI based parallel programs.
 
 ## Features
 
