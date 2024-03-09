@@ -14,7 +14,7 @@ no_of_nodes="$1"
 
 for (( i=1; i<=no_of_nodes; i++ ))
 do
-    sudo docker run --name "node$i" --hostname "node$i" -v /home/username/Desktop/storage:/home/storage -itd mpiclone
+    sudo docker run --name "node$i" --hostname "node$i" -v /home/username/Desktop/storage:/home/storage -itd i212498/mpiclone
     sudo docker exec "node$i" sudo service ssh restart
 done
 
